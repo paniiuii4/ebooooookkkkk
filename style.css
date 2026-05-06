@@ -1,0 +1,187 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center { text-align: center; }
+
+/* Navigasi */
+nav {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin-left: 20px; }
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent-color); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1512488685110-3882776c5b9f?auto=format&fit=crop&q=80&w=1470') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 20px; }
+
+.btn {
+    padding: 10px 30px;
+    background: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Section Styling */
+section { padding: 80px 0; }
+.bg-light { background: var(--light-bg); }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* About Styling */
+.about-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text, .vision-mission { flex: 1; min-width: 300px; }
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Product Card Styling */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover { transform: translateY(-5px); }
+
+.product-card img { width: 100%; height: 350px; object-fit: cover; }
+
+.product-info { padding: 20px; text-align: center; }
+
+.price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+.btn-buy {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Kontak Styling */
+.whatsapp-container { margin: 30px 0; }
+
+.wa-button {
+    background: #25d366;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.thanks-msg {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsif Hamburger Menu */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.5rem; }
+}
